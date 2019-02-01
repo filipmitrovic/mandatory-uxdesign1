@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UX Labb</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="mds.css">
+    <script src="mds.js" defer></script>
+</head>
+<body>
+    <form action="">
+        <div class="mds-text-field">
+            <label for="fname" class="mds-text-field__label">name</label>
+            <input type="text" name="fname" class="mds-text-field__input">
+            <p class="mds-text-field__text-under">Helper text</p>
+        </div>
+        <div class="mds-switch">
+            <label class="mds-switch__label">
+            <input type="checkbox" class="mds-switch__input">
+                <span class="mds-switch__slider"></span>
+            </label>
+        </div>
+        <div class="mds-checkbox">
+            <label class="mds-checkbox__label">
+                <input type="checkbox">
+                <span class="mds-checkbox__span"></span>
+            </label>
+        </div>
+        <div class="mds-radio">
+            <label class="container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </form>
+    <script>
+        mds.textField(document.querySelector(".mds-text-field"));
+    </script>
+</body>
+</html>

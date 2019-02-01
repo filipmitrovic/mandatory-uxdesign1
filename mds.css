@@ -1,0 +1,205 @@
+/* input */
+form {
+    border: 1px solid black;
+    height: 500px;
+    padding: 20px;
+}
+.mds-text-field {
+    position: relative;
+    height: 100px;
+}
+.mds-text-field__label {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 22px;
+    left: 14px;
+    z-index: 2;
+    font-size: 16px;
+}
+.mds-text-field__input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 280px;
+    height: 56px;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #dcdcdc;
+    outline:none;
+}
+.mds-text-field__text-under {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 47px;
+    left: 15px;
+    z-index: 2;
+    padding-top: 4px;
+    font-size: 12px;
+}
+
+
+/* switch */
+.mds-switch__label {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 15px;
+    outline: none;
+}
+.mds-switch__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+}
+.mds-switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+    outline: none;
+}
+.mds-switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: -5px;
+    bottom: -2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: .4s;
+}
+.mds-switch__input:checked + .mds-switch__slider {
+    background-color: #6200ee89;
+}
+.mds-switch__input:checked + .mds-switch__slider:before {
+    transform: translateX(26px);
+    background-color: #6200eeff;
+}
+.mds-switch__input:checked:hover + .mds-switch__slider:before {
+    box-shadow: 1px 1px 17px rgba(99, 0, 238, 0.5);
+}
+.mds-switch__input:hover + .mds-switch__slider:before {
+    box-shadow: 1px 1px 17px #a5a5a5a2;
+} 
+
+
+/* checkbox */
+.mds-checkbox__label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    user-select: none;
+}
+.mds-checkbox__label input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.mds-checkbox__span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid rgb(182, 182, 182);
+    background-color: rgb(255, 255, 255);
+}
+.mds-checkbox__label:hover input ~ .mds-checkbox__span {
+    box-shadow: 1px 1px 17px rgb(187, 187, 187);
+}
+.mds-checkbox__label input:checked ~ .mds-checkbox__span {
+    background-color: #6300ee;
+}
+.mds-checkbox__label input:checked ~ .mds-checkbox__span:hover {
+    box-shadow: 1px 1px 17px #6300ee;
+}
+.mds-checkbox__span:before {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.mds-checkbox__label input:checked ~ .mds-checkbox__span:before {
+    display: block;
+}
+.mds-checkbox__label .mds-checkbox__span:before {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+/* radio */
+.mds-radio {
+    margin-top: 50px;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    user-select: none;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border: 2px solid rgb(182, 182, 182);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.container input:checked ~ .checkmark {
+    border: 2px solid #6300ee;
+}
+.checkmark:before {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:before {
+    display: block;
+}
+.container .checkmark:before {
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #6300ee;
+}
+
+
+/*modifier disabled*/
+.mds--disabled {
+    opacity: 0.5;
+}
